@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FDB14381FFBDC8A00867FAC /* iTunes.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 4FDB14341FFBDC8900867FAC /* iTunes.sdef */; };
+		4FDB14391FFBDC8A00867FAC /* iTunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB14351FFBDC8900867FAC /* iTunes.swift */; };
+		4FDB143A1FFBDC8A00867FAC /* iTunesScripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB14371FFBDC8A00867FAC /* iTunesScripting.swift */; };
 		4FFDA1E51FFB8E9300667333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDA1E41FFB8E9300667333 /* AppDelegate.swift */; };
 		4FFDA1E71FFB8E9300667333 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDA1E61FFB8E9300667333 /* ViewController.swift */; };
 		4FFDA1E91FFB8E9300667333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFDA1E81FFB8E9300667333 /* Assets.xcassets */; };
@@ -14,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4FDB14341FFBDC8900867FAC /* iTunes.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = iTunes.sdef; sourceTree = "<group>"; };
+		4FDB14351FFBDC8900867FAC /* iTunes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunes.swift; sourceTree = "<group>"; };
+		4FDB14361FFBDC8900867FAC /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		4FDB14371FFBDC8A00867FAC /* iTunesScripting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesScripting.swift; sourceTree = "<group>"; };
 		4FFDA1E11FFB8E9300667333 /* LyricBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFDA1E41FFB8E9300667333 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FFDA1E61FFB8E9300667333 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +41,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FDB143B1FFBDC9200867FAC /* iTunes */ = {
+			isa = PBXGroup;
+			children = (
+				4FDB14361FFBDC8900867FAC /* iTunes.h */,
+				4FDB14341FFBDC8900867FAC /* iTunes.sdef */,
+				4FDB14351FFBDC8900867FAC /* iTunes.swift */,
+				4FDB14371FFBDC8A00867FAC /* iTunesScripting.swift */,
+			);
+			path = iTunes;
+			sourceTree = "<group>";
+		};
 		4FFDA1D81FFB8E9200667333 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +71,7 @@
 		4FFDA1E31FFB8E9300667333 /* LyricBar */ = {
 			isa = PBXGroup;
 			children = (
+				4FDB143B1FFBDC9200867FAC /* iTunes */,
 				4FFDA1E41FFB8E9300667333 /* AppDelegate.swift */,
 				4FFDA1E61FFB8E9300667333 /* ViewController.swift */,
 				4FFDA1E81FFB8E9300667333 /* Assets.xcassets */,
@@ -122,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDB14381FFBDC8A00867FAC /* iTunes.sdef in Resources */,
 				4FFDA1E91FFB8E9300667333 /* Assets.xcassets in Resources */,
 				4FFDA1EC1FFB8E9300667333 /* Main.storyboard in Resources */,
 			);
@@ -135,7 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FFDA1E71FFB8E9300667333 /* ViewController.swift in Sources */,
+				4FDB14391FFBDC8A00867FAC /* iTunes.swift in Sources */,
 				4FFDA1E51FFB8E9300667333 /* AppDelegate.swift in Sources */,
+				4FDB143A1FFBDC8A00867FAC /* iTunesScripting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
