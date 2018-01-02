@@ -681,18 +681,95 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--TunesVC-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="LyricBar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TunesVC" id="XfG-lQ-9wD" customClass="TunesVC" customModule="LyricBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="400"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="XCU-Q0-a0F">
+                                <rect key="frame" x="156" y="332" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="NOg-Kk-2pt"/>
+                                    <constraint firstAttribute="width" constant="48" id="b2p-oY-dQX"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pause" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="nTC-RP-ZQc">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="PlayPause:" target="XfG-lQ-9wD" id="yGL-HQ-zd9"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="JLP-LS-EQ4">
+                                <rect key="frame" x="214" y="332" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Ibf-Qv-9Yf"/>
+                                    <constraint firstAttribute="width" constant="48" id="PMD-XQ-xRw"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="next" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="AGV-Cu-FT3">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="NextSong:" target="XfG-lQ-9wD" id="xFa-Xu-Lmk"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="24J-lP-EKU">
+                                <rect key="frame" x="98" y="332" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="41P-Vv-JU5"/>
+                                    <constraint firstAttribute="width" constant="48" id="xyT-LF-F6d"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="previous" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="gRA-u4-rke">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="PreviousSong:" target="XfG-lQ-9wD" id="msx-z7-RRL"/>
+                                </connections>
+                            </button>
+                            <textField identifier="LyricBox" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OBU-U0-7DM">
+                                <rect key="frame" x="18" y="124" width="324" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="yfF-0j-Ykb"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Song Text Here" placeholderString="Loading" id="jwb-N2-FAV">
+                                    <font key="font" size="13" name="SFProDisplay-Light"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="OBU-U0-7DM" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="9uW-Yq-vag"/>
+                            <constraint firstItem="JLP-LS-EQ4" firstAttribute="leading" secondItem="XCU-Q0-a0F" secondAttribute="trailing" constant="10" id="FT6-Kv-Ps5"/>
+                            <constraint firstItem="OBU-U0-7DM" firstAttribute="top" secondItem="XCU-Q0-a0F" secondAttribute="bottom" constant="8" id="Hhh-4C-VRv"/>
+                            <constraint firstItem="JLP-LS-EQ4" firstAttribute="centerY" secondItem="XCU-Q0-a0F" secondAttribute="centerY" id="OgP-yi-zAs"/>
+                            <constraint firstItem="XCU-Q0-a0F" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="SrL-ND-3Ve"/>
+                            <constraint firstAttribute="trailing" secondItem="OBU-U0-7DM" secondAttribute="trailing" constant="20" id="YXN-WK-ojx"/>
+                            <constraint firstItem="24J-lP-EKU" firstAttribute="centerY" secondItem="XCU-Q0-a0F" secondAttribute="centerY" id="gLA-fB-fBw"/>
+                            <constraint firstItem="XCU-Q0-a0F" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="tIj-JN-HA2"/>
+                            <constraint firstItem="XCU-Q0-a0F" firstAttribute="leading" secondItem="24J-lP-EKU" secondAttribute="trailing" constant="10" id="xRA-KV-dhl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="LyricBox" destination="OBU-U0-7DM" id="nrD-O9-n9A"/>
+                        <outlet property="NextButton" destination="JLP-LS-EQ4" id="ndW-90-eDz"/>
+                        <outlet property="PlayPauseButton" destination="XCU-Q0-a0F" id="fAk-3N-Tiy"/>
+                        <outlet property="PreviousButton" destination="XCU-Q0-a0F" id="eZx-hP-Mcf"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="354" y="1056"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="next" width="39.829788208007812" height="39.829788208007812"/>
+        <image name="pause" width="39.829788208007812" height="39.829788208007812"/>
+        <image name="previous" width="39.829788208007812" height="39.829788208007812"/>
+    </resources>
 </document>

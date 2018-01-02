@@ -10,8 +10,8 @@
 		4FDB14381FFBDC8A00867FAC /* iTunes.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 4FDB14341FFBDC8900867FAC /* iTunes.sdef */; };
 		4FDB14391FFBDC8A00867FAC /* iTunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB14351FFBDC8900867FAC /* iTunes.swift */; };
 		4FDB143A1FFBDC8A00867FAC /* iTunesScripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB14371FFBDC8A00867FAC /* iTunesScripting.swift */; };
+		4FDB143F1FFBEDDA00867FAC /* TunesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB143E1FFBEDDA00867FAC /* TunesVC.swift */; };
 		4FFDA1E51FFB8E9300667333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDA1E41FFB8E9300667333 /* AppDelegate.swift */; };
-		4FFDA1E71FFB8E9300667333 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDA1E61FFB8E9300667333 /* ViewController.swift */; };
 		4FFDA1E91FFB8E9300667333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFDA1E81FFB8E9300667333 /* Assets.xcassets */; };
 		4FFDA1EC1FFB8E9300667333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FFDA1EA1FFB8E9300667333 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -21,9 +21,9 @@
 		4FDB14351FFBDC8900867FAC /* iTunes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunes.swift; sourceTree = "<group>"; };
 		4FDB14361FFBDC8900867FAC /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
 		4FDB14371FFBDC8A00867FAC /* iTunesScripting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesScripting.swift; sourceTree = "<group>"; };
+		4FDB143E1FFBEDDA00867FAC /* TunesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunesVC.swift; sourceTree = "<group>"; };
 		4FFDA1E11FFB8E9300667333 /* LyricBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFDA1E41FFB8E9300667333 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4FFDA1E61FFB8E9300667333 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4FFDA1E81FFB8E9300667333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FFDA1EB1FFB8E9300667333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FFDA1ED1FFB8E9300667333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 			children = (
 				4FDB143B1FFBDC9200867FAC /* iTunes */,
 				4FFDA1E41FFB8E9300667333 /* AppDelegate.swift */,
-				4FFDA1E61FFB8E9300667333 /* ViewController.swift */,
+				4FDB143E1FFBEDDA00867FAC /* TunesVC.swift */,
 				4FFDA1E81FFB8E9300667333 /* Assets.xcassets */,
 				4FFDA1EA1FFB8E9300667333 /* Main.storyboard */,
 				4FFDA1ED1FFB8E9300667333 /* Info.plist */,
@@ -154,7 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FFDA1E71FFB8E9300667333 /* ViewController.swift in Sources */,
+				4FDB143F1FFBEDDA00867FAC /* TunesVC.swift in Sources */,
 				4FDB14391FFBDC8A00867FAC /* iTunes.swift in Sources */,
 				4FFDA1E51FFB8E9300667333 /* AppDelegate.swift in Sources */,
 				4FDB143A1FFBDC8A00867FAC /* iTunesScripting.swift in Sources */,
