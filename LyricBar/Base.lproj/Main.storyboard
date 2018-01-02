@@ -695,7 +695,7 @@
                                     <constraint firstAttribute="height" constant="48" id="NOg-Kk-2pt"/>
                                     <constraint firstAttribute="width" constant="48" id="b2p-oY-dQX"/>
                                 </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pause" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="nTC-RP-ZQc">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pause" imagePosition="only" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyUpOrDown" inset="2" id="nTC-RP-ZQc">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -709,7 +709,7 @@
                                     <constraint firstAttribute="height" constant="48" id="Ibf-Qv-9Yf"/>
                                     <constraint firstAttribute="width" constant="48" id="PMD-XQ-xRw"/>
                                 </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="next" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="AGV-Cu-FT3">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="next" imagePosition="only" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyUpOrDown" inset="2" id="AGV-Cu-FT3">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -723,7 +723,7 @@
                                     <constraint firstAttribute="height" constant="48" id="41P-Vv-JU5"/>
                                     <constraint firstAttribute="width" constant="48" id="xyT-LF-F6d"/>
                                 </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="previous" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="gRA-u4-rke">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="previous" imagePosition="only" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyUpOrDown" inset="2" id="gRA-u4-rke">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
