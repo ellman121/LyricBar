@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -686,28 +687,51 @@
             <objects>
                 <viewController storyboardIdentifier="TunesVC" id="XfG-lQ-9wD" customClass="TunesVC" customModule="LyricBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="360" height="400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="405" height="408"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="XCU-Q0-a0F">
-                                <rect key="frame" x="156" y="332" width="48" height="48"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="glR-fa-vIF">
+                                <rect key="frame" x="18" y="362" width="369" height="26"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="NOg-Kk-2pt"/>
-                                    <constraint firstAttribute="width" constant="48" id="b2p-oY-dQX"/>
+                                    <constraint firstAttribute="height" constant="26" id="cw9-Iu-wL9"/>
                                 </constraints>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pause" imagePosition="only" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyUpOrDown" inset="2" id="nTC-RP-ZQc">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="PlayPause:" target="XfG-lQ-9wD" id="yGL-HQ-zd9"/>
-                                </connections>
-                            </button>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Artist / Song" id="Zod-1Y-W3n">
+                                    <font key="font" size="18" name="SFProDisplay-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="du4-4W-RpZ">
+                                <rect key="frame" x="178" y="304" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="XCU-Q0-a0F">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3tg-qR-yp5"/>
+                                            <constraint firstAttribute="width" constant="50" id="lAF-lH-Q9F"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pause" imagePosition="only" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyUpOrDown" inset="2" id="nTC-RP-ZQc">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="PlayPause:" target="XfG-lQ-9wD" id="yGL-HQ-zd9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="JLP-LS-EQ4">
-                                <rect key="frame" x="214" y="332" width="48" height="48"/>
+                                <rect key="frame" x="236" y="305" width="48" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="Ibf-Qv-9Yf"/>
-                                    <constraint firstAttribute="width" constant="48" id="PMD-XQ-xRw"/>
+                                    <constraint firstAttribute="width" constant="48" id="eg9-JI-mn3"/>
+                                    <constraint firstAttribute="height" constant="48" id="jex-1R-9YW"/>
                                 </constraints>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="next" imagePosition="only" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyUpOrDown" inset="2" id="AGV-Cu-FT3">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -718,10 +742,10 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="24J-lP-EKU">
-                                <rect key="frame" x="98" y="332" width="48" height="48"/>
+                                <rect key="frame" x="120" y="305" width="48" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="41P-Vv-JU5"/>
-                                    <constraint firstAttribute="width" constant="48" id="xyT-LF-F6d"/>
+                                    <constraint firstAttribute="height" constant="48" id="Vq6-M3-lMH"/>
+                                    <constraint firstAttribute="width" constant="48" id="hFQ-wK-oOY"/>
                                 </constraints>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="previous" imagePosition="only" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyUpOrDown" inset="2" id="gRA-u4-rke">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -731,40 +755,66 @@
                                     <action selector="PreviousSong:" target="XfG-lQ-9wD" id="msx-z7-RRL"/>
                                 </connections>
                             </button>
-                            <textField identifier="LyricBox" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OBU-U0-7DM">
-                                <rect key="frame" x="18" y="124" width="324" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="yfF-0j-Ykb"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Song Text Here" placeholderString="Loading" id="jwb-N2-FAV">
-                                    <font key="font" size="13" name="SFProDisplay-Light"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <scrollView wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sI-Xr-bC1">
+                                <rect key="frame" x="20" y="20" width="365" height="276"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="brG-hw-jc9">
+                                    <rect key="frame" x="0.0" y="0.0" width="365" height="276"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hg4-AA-jWB">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="261"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ju-sY-4UQ">
+                                                    <rect key="frame" x="18" y="22" width="332" height="239"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Song Text" id="FO9-L1-5Q5">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                            </subviews>
+                                        </view>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="6em-RU-Tqw">
+                                    <rect key="frame" x="0.0" y="260" width="365" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="mUj-fR-9By">
+                                    <rect key="frame" x="349" y="0.0" width="16" height="276"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="OBU-U0-7DM" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="9uW-Yq-vag"/>
-                            <constraint firstItem="JLP-LS-EQ4" firstAttribute="leading" secondItem="XCU-Q0-a0F" secondAttribute="trailing" constant="10" id="FT6-Kv-Ps5"/>
-                            <constraint firstItem="OBU-U0-7DM" firstAttribute="top" secondItem="XCU-Q0-a0F" secondAttribute="bottom" constant="8" id="Hhh-4C-VRv"/>
-                            <constraint firstItem="JLP-LS-EQ4" firstAttribute="centerY" secondItem="XCU-Q0-a0F" secondAttribute="centerY" id="OgP-yi-zAs"/>
-                            <constraint firstItem="XCU-Q0-a0F" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="SrL-ND-3Ve"/>
-                            <constraint firstAttribute="trailing" secondItem="OBU-U0-7DM" secondAttribute="trailing" constant="20" id="YXN-WK-ojx"/>
-                            <constraint firstItem="24J-lP-EKU" firstAttribute="centerY" secondItem="XCU-Q0-a0F" secondAttribute="centerY" id="gLA-fB-fBw"/>
-                            <constraint firstItem="XCU-Q0-a0F" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="tIj-JN-HA2"/>
-                            <constraint firstItem="XCU-Q0-a0F" firstAttribute="leading" secondItem="24J-lP-EKU" secondAttribute="trailing" constant="10" id="xRA-KV-dhl"/>
+                            <constraint firstItem="glR-fa-vIF" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="6F3-ae-OyU"/>
+                            <constraint firstItem="6sI-Xr-bC1" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="BXz-Iq-hqC"/>
+                            <constraint firstItem="glR-fa-vIF" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="IgO-hc-ywX"/>
+                            <constraint firstAttribute="bottom" secondItem="6sI-Xr-bC1" secondAttribute="bottom" constant="20" id="NBV-uw-pNB"/>
+                            <constraint firstItem="XCU-Q0-a0F" firstAttribute="top" secondItem="glR-fa-vIF" secondAttribute="bottom" constant="8" id="PxG-32-Tnq"/>
+                            <constraint firstItem="JLP-LS-EQ4" firstAttribute="leading" secondItem="XCU-Q0-a0F" secondAttribute="trailing" constant="8" id="YDV-j9-cmo"/>
+                            <constraint firstItem="XCU-Q0-a0F" firstAttribute="leading" secondItem="24J-lP-EKU" secondAttribute="trailing" constant="10" id="a2r-vd-FN7"/>
+                            <constraint firstItem="JLP-LS-EQ4" firstAttribute="centerY" secondItem="XCU-Q0-a0F" secondAttribute="centerY" id="fep-67-RtZ"/>
+                            <constraint firstItem="XCU-Q0-a0F" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="oNf-VT-qDI"/>
+                            <constraint firstItem="XCU-Q0-a0F" firstAttribute="centerY" secondItem="24J-lP-EKU" secondAttribute="centerY" id="pqg-mz-Wwu"/>
+                            <constraint firstItem="6sI-Xr-bC1" firstAttribute="top" secondItem="XCU-Q0-a0F" secondAttribute="bottom" constant="8" id="tS9-ZB-Kof"/>
+                            <constraint firstAttribute="trailing" secondItem="glR-fa-vIF" secondAttribute="trailing" constant="20" id="veG-LN-QsS"/>
+                            <constraint firstAttribute="trailing" secondItem="6sI-Xr-bC1" secondAttribute="trailing" constant="20" id="vfz-Wy-LSL"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="LyricBox" destination="OBU-U0-7DM" id="nrD-O9-n9A"/>
+                        <outlet property="LyricBox" destination="FO9-L1-5Q5" id="hp5-PP-FU5"/>
                         <outlet property="NextButton" destination="JLP-LS-EQ4" id="ndW-90-eDz"/>
                         <outlet property="PlayPauseButton" destination="XCU-Q0-a0F" id="fAk-3N-Tiy"/>
                         <outlet property="PreviousButton" destination="XCU-Q0-a0F" id="eZx-hP-Mcf"/>
+                        <outlet property="SongMetaBox" destination="glR-fa-vIF" id="4vf-Xg-aWi"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="354" y="1056"/>
+            <point key="canvasLocation" x="376.5" y="1060"/>
         </scene>
     </scenes>
     <resources>

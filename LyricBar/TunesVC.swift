@@ -38,8 +38,9 @@ class TunesVC: NSViewController {
     @IBOutlet weak var PreviousButton: NSButton!
     @IBOutlet weak var PlayPauseButton: NSButton!
     @IBOutlet weak var NextButton: NSButton!
-    @IBOutlet weak var LyricBox: NSTextField!
-
+    @IBOutlet weak var SongMetaBox: NSTextField!
+    @IBOutlet weak var LyricBox: NSTextFieldCell!
+    
     // MARK: - Lifecycle
     
     override func viewWillAppear() {
@@ -49,18 +50,56 @@ class TunesVC: NSViewController {
     
     // MARK: - Methods
     
+    func setLyricText(text: String) {
+        DispatchQueue.main.async {
+            self.LyricBox.stringValue = text
+        }
+    }
+    
     func update() {
         let iTunes = getITunes()
         if iTunes == nil {
-            LyricBox.stringValue = "iTunes Not Running"
+            self.LyricBox.stringValue = "iTunes Not Running"
         }
     
         let currentTrack = iTunes?.currentTrack
         if currentTrack == nil || currentTrack?.name == "" {
-            LyricBox.stringValue = "No Song Playing"
+            self.LyricBox.stringValue = "No Song Playing"
         }
         
+        // Set the song metadata
+        let artist = currentTrack?.artist
+        let name   = currentTrack?.name!
         
+        self.SongMetaBox.stringValue = "\(name!) - \(artist!)"
+        self.LyricBox.stringValue    = "... Loading ..."
+        
+        let percentEncodedArtist = artist?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)! ?? ""
+        let percentEncodedName   = name?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)! ?? ""
+        let url = URL(string: "https://lyric-api.herokuapp.com/api/find/\(percentEncodedArtist)/\(percentEncodedName)")!
+        let task = URLSession.shared.dataTask(with: url) { (raw_data, response, error) in
+            if error != nil {
+                return self.setLyricText(text: "Error!")
+            }
+            
+            guard let data = raw_data else {
+                return self.setLyricText(text: "No data received")
+            }
+            
+            guard let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: String] else {
+                return self.setLyricText(text: "Error serializing json")
+            }
+            
+            let err = json!["err"]!
+            
+            switch err {
+            case "not found":
+                return self.setLyricText(text: "Song Not Found")
+            default:
+                return self.setLyricText(text: json!["lyric"]!)
+            }
+        }
+        task.resume()
     }
     
     func setPlayPauseState() {
@@ -68,9 +107,9 @@ class TunesVC: NSViewController {
         if iTunes != nil {
             let state = iTunes?.playerState!
             if state! == iTunesEPlS.paused || state! == iTunesEPlS.stopped {
-                PlayPauseButton.image = NSImage(named: NSImage.Name("play"))
+                self.PlayPauseButton.image = NSImage(named: NSImage.Name("play"))
             } else if state! == iTunesEPlS.playing {
-                PlayPauseButton.image = NSImage(named: NSImage.Name("pause"))
+                self.PlayPauseButton.image = NSImage(named: NSImage.Name("pause"))
             }
         }
     }
