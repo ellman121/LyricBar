@@ -23,6 +23,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named:NSImage.Name("L"))
             button.action = #selector(toggle(_:))
         }
+        
+        NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseDown, .rightMouseDown]) { (e) in
+            if self.popover.isShown {
+                self.popover.close()
+                self.popover.contentViewController = nil
+            }
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
