@@ -41,6 +41,9 @@ class TunesVC: NSViewController {
     @IBOutlet weak var SongMetaBox: NSTextField!
     @IBOutlet weak var LyricBox: NSTextFieldCell!
     
+    // MARK: - Instance Variables
+    var currentTask: URLSessionTask? = nil
+    
     // MARK: - Lifecycle
     
     override func viewWillAppear() {
@@ -67,6 +70,11 @@ class TunesVC: NSViewController {
             self.LyricBox.stringValue = "No Song Playing"
         }
         
+        if self.currentTask != nil {
+            self.currentTask?.cancel()
+            self.currentTask = nil
+        }
+        
         // Set the song metadata
         let artist = currentTrack?.artist
         let name   = currentTrack?.name!
@@ -77,9 +85,9 @@ class TunesVC: NSViewController {
         let percentEncodedArtist = artist?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)! ?? ""
         let percentEncodedName   = name?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)! ?? ""
         let url = URL(string: "https://lyric-api.herokuapp.com/api/find/\(percentEncodedArtist)/\(percentEncodedName)")!
-        let task = URLSession.shared.dataTask(with: url) { (raw_data, response, error) in
+        self.currentTask = URLSession.shared.dataTask(with: url) { (raw_data, response, error) in
             if error != nil {
-                return self.setLyricText(text: "Error!")
+                return
             }
             
             guard let data = raw_data else {
@@ -91,7 +99,6 @@ class TunesVC: NSViewController {
             }
             
             let err = json!["err"]!
-            
             switch err {
             case "not found":
                 return self.setLyricText(text: "Song Not Found")
@@ -99,7 +106,7 @@ class TunesVC: NSViewController {
                 return self.setLyricText(text: json!["lyric"]!)
             }
         }
-        task.resume()
+        self.currentTask?.resume()
     }
     
     func setPlayPauseState() {
