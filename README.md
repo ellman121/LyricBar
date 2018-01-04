@@ -2,9 +2,12 @@
 A basic menubar application to show some basic iTunes controls and preview the lyrics of the currently playing song.
 
 ## Screenshot
-![Screenshot](https://elliottrarden.me/assets/LyricBar_Screenshot.png)
+![Screenshot](https://elliottrarden.me/assets/LyricBar_Screenshot.png = 400x400)
 
 ## FAQ
+
+### The icon is pixelated
+Yeah, I know.  I just couldn't be bothered to create a high-res enough asset for it becuase I'm still not sure I like the L.  If you have an idea for an image feel free to submit a PR with it.  I'm open to suggestions
 
 ### Your code is garbage
 I know.  I'm not a swift developer by traiing, I just threw this together in my free time.  If you have code feedback (wether my stuff isn't conventional, inefficient, etc.) please submit a PR.  I'm just trying to learn some new stuff with this app.
