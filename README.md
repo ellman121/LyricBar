@@ -1,6 +1,9 @@
 # LyricsBar
 A basic menubar application to show some basic iTunes controls and preview the lyrics of the currently playing song.
 
+## Screenshot
+![Screenshot](https://elliottrarden.me/assets/LyricBar_Screenshot.png)
+
 ## FAQ
 
 ### Your code is garbage
