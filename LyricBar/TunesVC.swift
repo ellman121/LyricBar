@@ -39,7 +39,8 @@ class TunesVC: NSViewController {
     @IBOutlet weak var PlayPauseButton: NSButton!
     @IBOutlet weak var NextButton: NSButton!
     @IBOutlet weak var SongMetaBox: NSTextField!
-    @IBOutlet weak var LyricBox: NSTextFieldCell!
+    @IBOutlet var LyricBox: NSTextView!
+    
     
     // MARK: - Instance Variables
     var currentTask: URLSessionTask? = nil
@@ -49,25 +50,41 @@ class TunesVC: NSViewController {
     override func viewWillAppear() {
         self.update()
         self.setPlayPauseState()
+        
+        // Set default values for the text view
+        LyricBox.font = NSFont(name: "SF Pro Display", size: 16)
+        LyricBox.alignment = NSTextAlignment.center
+        LyricBox.textColor = NSColor.white
     }
     
     // MARK: - Methods
     
     func setLyricText(text: String) {
         DispatchQueue.main.async {
-            self.LyricBox.stringValue = text
+            self.LyricBox.string = text
         }
     }
+    
+    func setSongMetaText(text: String) {
+        DispatchQueue.main.async {
+            self.SongMetaBox.stringValue = text
+        }
+    }
+    
+//    func scrollToPosition()
+//    {
+//        let iTunes = getITunes()
+//    }
     
     func update() {
         let iTunes = getITunes()
         if iTunes == nil {
-            self.LyricBox.stringValue = "iTunes Not Running"
+            self.setLyricText(text: "iTunes Not Running")
         }
     
         let currentTrack = iTunes?.currentTrack
         if currentTrack == nil || currentTrack?.name == "" {
-            self.LyricBox.stringValue = "No Song Playing"
+            self.setLyricText(text: "No Song Playing")
         }
         
         if self.currentTask != nil {
@@ -79,8 +96,8 @@ class TunesVC: NSViewController {
         let artist = currentTrack?.artist
         let name   = currentTrack?.name!
         
-        self.SongMetaBox.stringValue = "\(name!) - \(artist!)"
-        self.LyricBox.stringValue    = "... Loading ..."
+        self.setSongMetaText(text: "\(name!) - \(artist!)")
+        self.setLyricText(text: "... Loading ...")
         
         let percentEncodedArtist = artist?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)! ?? ""
         let percentEncodedName   = name?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)! ?? ""
@@ -103,7 +120,9 @@ class TunesVC: NSViewController {
             case "not found":
                 return self.setLyricText(text: "Song Not Found")
             default:
-                return self.setLyricText(text: json!["lyric"]!)
+                self.setLyricText(text: json!["lyric"]!)
+//                self.scrollToPosition()
+                return
             }
         }
         self.currentTask?.resume()
