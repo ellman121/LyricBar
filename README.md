@@ -10,4 +10,4 @@ I know.  I'm not a swift developer by traiing, I just threw this together in my 
 I made this so that I could look up the lyrics to the song I'm listening to  while working.  But if you want features, please build it and submit a PR, I will gladly merge things that are of value!
 
 ### Is there anything I can do for you, ellman121 senpai?
-The app is completely free to use, and I ask nothing in return.  If you feel so inclined, you can [buy me a beer](paypal.me/ellman121).  I'm also always looking for feedback on my code (I'm not the worlds greatest macOS developer, so any feedback is appreciated)
+The app is completely free to use, and I ask nothing in return.  If you feel so inclined, you can [buy me a beer](https://paypal.me/ellman121).  I'm also always looking for feedback on my code (I'm not the worlds greatest macOS developer, so any feedback is appreciated)
