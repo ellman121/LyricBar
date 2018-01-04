@@ -2,7 +2,7 @@
 A basic menubar application to show some basic iTunes controls and preview the lyrics of the currently playing song.
 
 ## Screenshot
-![Screenshot](https://elliottrarden.me/assets/LyricBar_Screenshot.png =400x400)
+![Screenshot](<img src="https://elliottrarden.me/assets/LyricBar_Screenshot.png" height="400" width="400">)
 
 ## FAQ
 
