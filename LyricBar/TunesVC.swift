@@ -40,7 +40,7 @@ class TunesVC: NSViewController {
     @IBOutlet weak var NextButton: NSButton!
     @IBOutlet weak var SongMetaBox: NSTextField!
     @IBOutlet var LyricBox: NSTextView!
-    
+    @IBOutlet weak var ScrollView: NSScrollView!
     
     // MARK: - Instance Variables
     var currentTask: URLSessionTask? = nil
@@ -71,10 +71,13 @@ class TunesVC: NSViewController {
         }
     }
     
-//    func scrollToPosition()
-//    {
-//        let iTunes = getITunes()
-//    }
+    func scrollToPosition()
+    {
+        let iTunes = getITunes()
+        let position = (iTunes?.playerPosition)!
+        let duration = (iTunes?.currentTrack?.duration)!
+        let percentage = max((position / duration) - 0.1, 0)
+    }
     
     func update() {
         let iTunes = getITunes()
@@ -93,14 +96,14 @@ class TunesVC: NSViewController {
         }
         
         // Set the song metadata
-        let artist = currentTrack?.artist
-        let name   = currentTrack?.name!
+        let artist = (currentTrack?.artist)!
+        let name   = (currentTrack?.name)!
         
-        self.setSongMetaText(text: "\(name!) - \(artist!)")
+        self.setSongMetaText(text: "\(name) - \(artist)")
         self.setLyricText(text: "... Loading ...")
         
-        let percentEncodedArtist = artist?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)! ?? ""
-        let percentEncodedName   = name?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)! ?? ""
+        let percentEncodedArtist = artist.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        let percentEncodedName   = name.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         let url = URL(string: "https://lyric-api.herokuapp.com/api/find/\(percentEncodedArtist)/\(percentEncodedName)")!
         self.currentTask = URLSession.shared.dataTask(with: url) { (raw_data, response, error) in
             if error != nil {
@@ -121,7 +124,7 @@ class TunesVC: NSViewController {
                 return self.setLyricText(text: "Song Not Found")
             default:
                 self.setLyricText(text: json!["lyric"]!)
-//                self.scrollToPosition()
+                self.scrollToPosition()
                 return
             }
         }

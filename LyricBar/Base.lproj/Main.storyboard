@@ -804,6 +804,7 @@
                         <outlet property="NextButton" destination="JLP-LS-EQ4" id="ndW-90-eDz"/>
                         <outlet property="PlayPauseButton" destination="XCU-Q0-a0F" id="fAk-3N-Tiy"/>
                         <outlet property="PreviousButton" destination="XCU-Q0-a0F" id="eZx-hP-Mcf"/>
+                        <outlet property="ScrollView" destination="BaE-GK-d3M" id="xyQ-e0-lkR"/>
                         <outlet property="SongMetaBox" destination="glR-fa-vIF" id="4vf-Xg-aWi"/>
                     </connections>
                 </viewController>
