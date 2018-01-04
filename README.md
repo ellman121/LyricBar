@@ -5,7 +5,7 @@ A basic menubar application to show some basic iTunes controls and preview the l
 <img src="https://elliottrarden.me/assets/LyricBar_Screenshot.png" height="400" width="400">
 
 ## `Thank You`'s
-Big thank you to [@rhnvrm](https://github.com/rhnvrm) for creating [a REST api for lyrics](https://github.com/rhnvrm/lyric-api)
+Big thank you to [@rhnvrm](https://github.com/rhnvrm) for creating [the lyrics api I used](https://github.com/rhnvrm/lyric-api)
 
 ## FAQ
 
