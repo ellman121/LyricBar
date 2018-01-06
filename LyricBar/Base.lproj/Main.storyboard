@@ -782,6 +782,20 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="caC-p0-WQt">
+                                <rect key="frame" x="358" y="20" width="27" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="haI-VF-kPM"/>
+                                    <constraint firstAttribute="width" constant="27" id="rNN-mc-i7m"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="exit" imagePosition="only" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyUpOrDown" inset="2" id="w1L-pS-d2m">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="Exit:" target="XfG-lQ-9wD" id="hpY-wz-nen"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="glR-fa-vIF" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="6F3-ae-OyU"/>
@@ -794,8 +808,10 @@
                             <constraint firstAttribute="bottom" secondItem="BaE-GK-d3M" secondAttribute="bottom" constant="20" id="ZSu-CI-5l5"/>
                             <constraint firstItem="XCU-Q0-a0F" firstAttribute="leading" secondItem="24J-lP-EKU" secondAttribute="trailing" constant="10" id="a2r-vd-FN7"/>
                             <constraint firstItem="JLP-LS-EQ4" firstAttribute="centerY" secondItem="XCU-Q0-a0F" secondAttribute="centerY" id="fep-67-RtZ"/>
+                            <constraint firstAttribute="bottom" secondItem="caC-p0-WQt" secondAttribute="bottom" constant="20" id="juQ-ub-aWo"/>
                             <constraint firstItem="XCU-Q0-a0F" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="oNf-VT-qDI"/>
                             <constraint firstItem="XCU-Q0-a0F" firstAttribute="centerY" secondItem="24J-lP-EKU" secondAttribute="centerY" id="pqg-mz-Wwu"/>
+                            <constraint firstAttribute="trailing" secondItem="caC-p0-WQt" secondAttribute="trailing" constant="20" id="tNA-PW-auO"/>
                             <constraint firstAttribute="trailing" secondItem="glR-fa-vIF" secondAttribute="trailing" constant="20" id="veG-LN-QsS"/>
                         </constraints>
                     </view>
@@ -814,6 +830,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="exit" width="20.799999237060547" height="20.799999237060547"/>
         <image name="next" width="39.829788208007812" height="39.829788208007812"/>
         <image name="pause" width="39.829788208007812" height="39.829788208007812"/>
         <image name="previous" width="39.829788208007812" height="39.829788208007812"/>

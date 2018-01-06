@@ -145,6 +145,10 @@ class TunesVC: NSViewController {
     
     // MARK: - IBActions
     
+    @IBAction func Exit(_ sender: Any) {
+        NSApplication.shared.terminate(sender)
+    }
+    
     @IBAction func PreviousSong(_ sender: Any) {
         let iTunes = getITunes()
         if iTunes != nil {
