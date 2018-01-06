@@ -6,34 +6,37 @@ A basic menubar application to show some basic iTunes controls and preview the l
 
 ## Installation
 
-### Easy
+#### Easy
 Extract build/LyricBar.app.zip, drag the app to `/Applications` or some similar folder.  You can set it to auto start on login in System Preferences.
 
 The SHA256 sum for the zip file is `0e28086db9ca07c6bddf8a19321fce8598375c790d6a316d5f073bf6e955e5d0`
 
-### Build from source (must have xcode command line tools installed)
+#### Build from source (must have xcode command line tools installed)
 ```
 $ make
 ```
 
 This will build the app and leave it in the root directory of the project.
 
-### Post Install
+#### Post Install
 You may get a warning about security opening applications from unverified developers.  If you trust me / the code you can read above you can bypass macOS security in `System Preferences -> Security -> General`
 
 ## `Thank You`'s
 Big thank you to [@rhnvrm](https://github.com/rhnvrm) for creating [the lyrics api I used](https://github.com/rhnvrm/lyric-api)
 
+## Roadmap
+I'm currently working on having the app guess where to scroll to based on % of time through the song.  
+
 ## FAQ
 
-### The icon is pixelated
+#### The icon is pixelated
 Yeah, I know.  I just couldn't be bothered to create a high-res enough asset for it becuase I'm still not sure I like the `L`.  If you have an idea for an image feel free to submit a PR with it.  I'm open to suggestions
 
-### Your code is garbage
+#### Your code is garbage
 I know.  I'm not a swift developer by traiing, I just threw this together in my free time.  If you have code feedback (wether my stuff isn't conventional, inefficient, etc.) please submit a PR.  I'm just trying to learn some new stuff with this app.
 
-### Why doesn't it do ___
-I made this so that I could look up the lyrics to the song I'm listening to  while working.  But if you want features, please build it and submit a PR, I will gladly merge things that are of value!
+#### Why doesn't it do ___
+I made this so that I could look up the lyrics to the song I'm listening to  while working.  But if you want features, please build it and submit a PR, I will gladly merge things that are of value!  I'm also accepting feature requests in Issues
 
-### Is there anything I can do for you, ellman121 senpai?
+#### Is there anything I can do for you, ellman121 senpai?
 The app is completely free to use, and I ask nothing in return.  If you feel so inclined, you can [buy me a beer](https://paypal.me/ellman121).  I'm also always looking for feedback on my code (I'm not the worlds greatest macOS developer, so any feedback is appreciated)
