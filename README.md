@@ -4,6 +4,23 @@ A basic menubar application to show some basic iTunes controls and preview the l
 ## Screenshot
 <img src="https://elliottrarden.me/assets/LyricBar_Screenshot.png" height="400" width="400">
 
+## Installation
+
+### Easy
+Extract build/LyricBar.app.zip, drag the app to `/Applications` or some similar folder.  You can set it to auto start on login in System Preferences.
+
+The SHA256 sum for the zip file is `0e28086db9ca07c6bddf8a19321fce8598375c790d6a316d5f073bf6e955e5d0`
+
+### Build from source (must have xcode command line tools installed)
+```
+$ make
+```
+
+This will build the app and leave it in the root directory of the project.
+
+### Post Install
+You may get a warning about security opening applications from unverified developers.  If you trust me / the code you can read above you can bypass macOS security in `System Preferences -> Security -> General`
+
 ## `Thank You`'s
 Big thank you to [@rhnvrm](https://github.com/rhnvrm) for creating [the lyrics api I used](https://github.com/rhnvrm/lyric-api)
 
