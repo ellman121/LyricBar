@@ -755,7 +755,7 @@
                                     <action selector="PreviousSong:" target="XfG-lQ-9wD" id="msx-z7-RRL"/>
                                 </connections>
                             </button>
-                            <scrollView wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaE-GK-d3M">
+                            <scrollView wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaE-GK-d3M">
                                 <rect key="frame" x="20" y="20" width="365" height="276"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="hIz-qc-kaA">
                                     <rect key="frame" x="0.0" y="0.0" width="365" height="276"/>
@@ -777,16 +777,16 @@
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="VUU-wV-Bfo">
-                                    <rect key="frame" x="349" y="0.0" width="16" height="276"/>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="VUU-wV-Bfo">
+                                    <rect key="frame" x="-100" y="-100" width="15" height="276"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="caC-p0-WQt">
-                                <rect key="frame" x="358" y="20" width="27" height="27"/>
+                                <rect key="frame" x="358" y="327" width="27" height="27"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="haI-VF-kPM"/>
-                                    <constraint firstAttribute="width" constant="27" id="rNN-mc-i7m"/>
+                                    <constraint firstAttribute="width" constant="27" id="4ZP-jc-T5L"/>
+                                    <constraint firstAttribute="height" constant="27" id="HEv-E9-Rsg"/>
                                 </constraints>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="exit" imagePosition="only" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyUpOrDown" inset="2" id="w1L-pS-d2m">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -798,6 +798,7 @@
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="caC-p0-WQt" firstAttribute="top" secondItem="glR-fa-vIF" secondAttribute="bottom" constant="8" id="2ib-Nm-8Rk"/>
                             <constraint firstItem="glR-fa-vIF" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="6F3-ae-OyU"/>
                             <constraint firstItem="BaE-GK-d3M" firstAttribute="top" secondItem="XCU-Q0-a0F" secondAttribute="bottom" constant="8" id="Goh-HU-YvO"/>
                             <constraint firstItem="glR-fa-vIF" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="IgO-hc-ywX"/>
@@ -808,10 +809,9 @@
                             <constraint firstAttribute="bottom" secondItem="BaE-GK-d3M" secondAttribute="bottom" constant="20" id="ZSu-CI-5l5"/>
                             <constraint firstItem="XCU-Q0-a0F" firstAttribute="leading" secondItem="24J-lP-EKU" secondAttribute="trailing" constant="10" id="a2r-vd-FN7"/>
                             <constraint firstItem="JLP-LS-EQ4" firstAttribute="centerY" secondItem="XCU-Q0-a0F" secondAttribute="centerY" id="fep-67-RtZ"/>
-                            <constraint firstAttribute="bottom" secondItem="caC-p0-WQt" secondAttribute="bottom" constant="20" id="juQ-ub-aWo"/>
+                            <constraint firstAttribute="trailing" secondItem="caC-p0-WQt" secondAttribute="trailing" constant="20" id="mic-sc-mxz"/>
                             <constraint firstItem="XCU-Q0-a0F" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="oNf-VT-qDI"/>
                             <constraint firstItem="XCU-Q0-a0F" firstAttribute="centerY" secondItem="24J-lP-EKU" secondAttribute="centerY" id="pqg-mz-Wwu"/>
-                            <constraint firstAttribute="trailing" secondItem="caC-p0-WQt" secondAttribute="trailing" constant="20" id="tNA-PW-auO"/>
                             <constraint firstAttribute="trailing" secondItem="glR-fa-vIF" secondAttribute="trailing" constant="20" id="veG-LN-QsS"/>
                         </constraints>
                     </view>
