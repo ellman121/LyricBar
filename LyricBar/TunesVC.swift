@@ -52,7 +52,7 @@ class TunesVC: NSViewController {
         self.setPlayPauseState()
         
         // Set default values for the text view
-        LyricBox.font = NSFont(name: "SF Pro Display", size: 16)
+        LyricBox.font = NSFont(name: "SF Pro Display", size: 14)
         LyricBox.alignment = NSTextAlignment.center
         LyricBox.textColor = NSColor.white
     }
@@ -97,7 +97,8 @@ class TunesVC: NSViewController {
         
         // Set the song metadata
         let artist = (currentTrack?.artist)!
-        let name   = (currentTrack?.name)!
+        let name   = (currentTrack?.name)!.replacingOccurrences(of: "\\s?[\\(\\[][\\w\\s]*[\\)\\]]\\s*", with: "", options: NSString.CompareOptions.regularExpression)
+        print(name)
         
         self.setSongMetaText(text: "\(name) - \(artist)")
         self.setLyricText(text: "... Loading ...")
