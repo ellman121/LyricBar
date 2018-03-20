@@ -80,25 +80,28 @@ class TunesVC: NSViewController {
     }
     
     func update() {
+        // If we are already fetching
+        // stop the current one and continue
+        if self.currentTask != nil {
+            self.currentTask?.cancel()
+            self.currentTask = nil
+        }
+        
         let iTunes = getITunes()
         if iTunes == nil {
             self.setLyricText(text: "iTunes Not Running")
         }
     
         let currentTrack = iTunes?.currentTrack
-        if currentTrack == nil || currentTrack?.name == "" {
-            self.setLyricText(text: "No Song Playing")
-        }
-        
-        if self.currentTask != nil {
-            self.currentTask?.cancel()
-            self.currentTask = nil
+        if currentTrack == nil || currentTrack?.name! == "" {
+            self.setSongMetaText(text: "No song playing")
+            self.setLyricText(text: "")
+            return
         }
         
         // Set the song metadata
         let artist = (currentTrack?.artist)!
         let name   = (currentTrack?.name)!.replacingOccurrences(of: "\\s?[\\(\\[][\\w\\s]*[\\)\\]]\\s*", with: "", options: NSString.CompareOptions.regularExpression)
-        print(name)
         
         self.setSongMetaText(text: "\(name) - \(artist)")
         self.setLyricText(text: "... Loading ...")

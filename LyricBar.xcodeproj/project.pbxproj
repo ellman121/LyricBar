@@ -32,9 +32,11 @@
 		4FFDA1E51FFB8E9300667333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDA1E41FFB8E9300667333 /* AppDelegate.swift */; };
 		4FFDA1E91FFB8E9300667333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFDA1E81FFB8E9300667333 /* Assets.xcassets */; };
 		4FFDA1EC1FFB8E9300667333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FFDA1EA1FFB8E9300667333 /* Main.storyboard */; };
+		839365AA9E5D31DFB581EF09 /* Pods_LyricBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 060859B64C3A77FEF0F3304B /* Pods_LyricBar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		060859B64C3A77FEF0F3304B /* Pods_LyricBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LyricBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F3C2451204EC889003E5CC3 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		4F3C2452204EC889003E5CC3 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 		4F3C2453204EC889003E5CC3 /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
@@ -64,6 +66,8 @@
 		4FFDA1EB1FFB8E9300667333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FFDA1ED1FFB8E9300667333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FFDA1EE1FFB8E9300667333 /* LyricBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LyricBar.entitlements; sourceTree = "<group>"; };
+		742623A75A68E53F8106B176 /* Pods-LyricBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricBar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LyricBar/Pods-LyricBar.debug.xcconfig"; sourceTree = "<group>"; };
+		E883480311BEC2F09F4529B3 /* Pods-LyricBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricBar.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyricBar/Pods-LyricBar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839365AA9E5D31DFB581EF09 /* Pods_LyricBar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +123,8 @@
 			children = (
 				4FFDA1E31FFB8E9300667333 /* LyricBar */,
 				4FFDA1E21FFB8E9300667333 /* Products */,
+				C39170EB1FDE32E4B791E352 /* Pods */,
+				880BDB8BA448B448FB4F1D46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +151,23 @@
 			path = LyricBar;
 			sourceTree = "<group>";
 		};
+		880BDB8BA448B448FB4F1D46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				060859B64C3A77FEF0F3304B /* Pods_LyricBar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C39170EB1FDE32E4B791E352 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				742623A75A68E53F8106B176 /* Pods-LyricBar.debug.xcconfig */,
+				E883480311BEC2F09F4529B3 /* Pods-LyricBar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FFDA1F11FFB8E9300667333 /* Build configuration list for PBXNativeTarget "LyricBar" */;
 			buildPhases = (
+				9C00D06CE0C0FE311163E7B5 /* [CP] Check Pods Manifest.lock */,
 				4FFDA1DD1FFB8E9300667333 /* Sources */,
 				4FFDA1DE1FFB8E9300667333 /* Frameworks */,
 				4FFDA1DF1FFB8E9300667333 /* Resources */,
+				BD860C209688A6AA6A938E07 /* [CP] Embed Pods Frameworks */,
+				8570FA7FA987A3C6B5DE0101 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +260,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8570FA7FA987A3C6B5DE0101 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyricBar/Pods-LyricBar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C00D06CE0C0FE311163E7B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LyricBar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD860C209688A6AA6A938E07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LyricBar/Pods-LyricBar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Magnet/Magnet.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Magnet.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyricBar/Pods-LyricBar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4FFDA1DD1FFB8E9300667333 /* Sources */ = {
@@ -368,6 +449,7 @@
 		};
 		4FFDA1F21FFB8E9300667333 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 742623A75A68E53F8106B176 /* Pods-LyricBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -383,6 +465,7 @@
 		};
 		4FFDA1F31FFB8E9300667333 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E883480311BEC2F09F4529B3 /* Pods-LyricBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
