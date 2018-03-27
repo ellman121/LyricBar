@@ -5,7 +5,7 @@ A basic menubar application to show some basic iTunes controls and preview the l
 <img src="https://elliottrarden.me/assets/LyricBar_Screenshot.png" height="400" width="400">
 
 ## Installation
-Open the .xcodeproj and build it.  I am working on a better release format, I promise.
+Open the .xcworkspace and build it.  I am working on a better release format, I promise.
 
 #### Post Install
 You may get a warning about security opening applications from unverified developers.  If you trust me / the code you can read above you can bypass macOS security in `System Preferences -> Security -> General`
