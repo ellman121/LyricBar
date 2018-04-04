@@ -695,7 +695,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="cw9-Iu-wL9"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Artist / Song" id="Zod-1Y-W3n">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="Artist / Song" id="Zod-1Y-W3n">
                                     <font key="font" size="18" name="SFProDisplay-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
