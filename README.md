@@ -28,4 +28,4 @@ I know.  I'm not a swift developer by traiing, I just threw this together in my 
 Yes please!  I have a few open issues for people to take a look at if they would like to start.  If you want a feature, add an issue with the tag `[FR]` and I'll consider it.  If you want to build a feature, fork and submit a PR.
 
 #### Is there anything I can do for you, ellman121 senpai?
-The app is completely free to use, and I ask nothing in return.  If you feel so inclined, you can [buy me a beer](https://paypal.me/ellman121).  I'm also always looking for feedback on my code (I'm not the worlds greatest macOS developer, so any feedback is appreciated)
+The app is completely free to use, and I ask nothing in return.  If you feel so inclined, you can [buy me a beer](https://paypal.me/elliottrarden).  I'm also always looking for feedback on my code (I'm not the worlds greatest macOS developer, so any feedback is appreciated)
