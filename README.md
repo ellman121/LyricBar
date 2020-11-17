@@ -2,7 +2,7 @@
 A basic menubar application to show some basic iTunes controls and preview the lyrics of the currently playing song.
 
 ## Screenshot
-<img src="https://elliottrarden.me/assets/LyricBar_Screenshot.png" height="400" width="400">
+<img src="https://elliottrarden.me/img/LyricBar_Screenshot.png" height="400" width="400">
 
 ## Installation
 Open the .xcworkspace and build it.  I am working on a better release format, I promise.
